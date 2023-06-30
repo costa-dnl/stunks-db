@@ -1,0 +1,26 @@
+{
+  "name": "stunks-db",
+  "version": "0.0.1",
+  "description": "A simple database with a simple purpose.",
+  "main": "dist/",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "local storage",
+    "local database"
+  ],
+  "author": {
+    "name": "costa-dnl",
+    "url": "https://github.com/costa-dnl",
+    "email": "dev.costadnl@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/costa-dnl/stunks-db.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.16.3"
+  }
+}
