@@ -7,7 +7,7 @@ class StunksDb {
 
   constructor(name?: string, path?: string) {
     name = name || "stunksDB";
-    path = `${path?.replace(/^(\.\/|\/)/, "")}` || "database";
+    path = path ? `${path?.replace(/^(\.\/|\/)/, "")}` : "database";
     this.path = `${path}/${name}.json`;
 
     try {

@@ -1,6 +1,6 @@
 {
   "name": "stunks-db",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "A simple library for data storage in a JSON database",
   "main": "dist/",
   "scripts": {
