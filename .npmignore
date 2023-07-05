@@ -1,9 +1,5 @@
-.logs/
-database/
 node_modules/
 src/
 .gitignore
-index.test.js
+index.test.*js
 tsconfig.json
-*.test.cjs
-*.test.mjs

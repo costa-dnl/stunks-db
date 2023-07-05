@@ -1,13 +1,13 @@
 <div align="center" style="margin-bottom: 30px">
 
-  # StunksDb
+  # Stunks-DB
 
   <img src="https://img.shields.io/npm/v/stunks-db?color=black&label=version" alt="Version"/>
   <img src="https://img.shields.io/npm/dt/stunks-db?color=black" alt="Downloads"/>
-  <img src="https://img.shields.io/bundlephobia/min/stunks-db?color=black" alt="size"/>
-  <img src="https://img.shields.io/npm/l/stunks-db?color=black" alt="license"/>
+  <img src="https://img.shields.io/bundlephobia/min/stunks-db?color=black" alt="Size"/>
+  <img src="https://img.shields.io/npm/l/stunks-db?color=black" alt="License"/>
 </div>
-A simple library for data storage in a JSON database.
+A simple database with a simple purpose.
 
 ## Installation
 ```
@@ -21,18 +21,22 @@ import StunksDb from "stunks-db";
 const usersDb = new StunksDb("users");
 // The name 'users' will be used as the file name
 
-usersDb.set("name", "Daniel").set("lastname", "Costa");
-// 'Daniel' and 'Costa' were saved in the keys 'name' and 'lastname' respectively.
+usersDb.ref("11111.lastname").set("Costa");
+// 'Costa' was saved in '11111.lastname'.
+usersDb.ref("99999.name").set("Yuri");
+// 'Yuri' was saved in '99999.name'.
 
-usersDb.get("name");
-// It will return 'Daniel'
+usersDb.ref("11111.age").set(10);
+usersDb.ref("11111.age").add(4);
+// Now '11111.age' will be set to '14'
+usersDb.ref("99999.age").add(32);
+// '32' was added in '99999.age'.
 
-usersDb.delete("name");
-// now there won't be any value inside 'name' anymore
+usersDb.ref("11111.lastname").delete();
+// Now there won't be any value inside '11111.lastname' anymore.
 
-usersDb.add("age", 10).add("age", 4);
-// Now 'age' will be set to '14'
-
-usersDb.all();
-// It will return {lastname: "Costa", age: 14}
+usersDb.ref("11111.lastname").get();
+// It will return 'undefined'
+usersDb.ref().get();
+// It will return { "11111": { "age": 14 }, "99999": { "lastname": "Yuri", "age": 32 } }
 ```

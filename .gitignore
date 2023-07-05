@@ -1,6 +1,3 @@
-.logs/
-database/
 dist/
 node_modules/
-*.test.cjs
-*.test.mjs
+index.test.*js

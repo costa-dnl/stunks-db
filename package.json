@@ -1,7 +1,7 @@
 {
   "name": "stunks-db",
-  "version": "0.0.1",
-  "description": "A simple database with a simple purpose.",
+  "version": "0.0.2",
+  "description": "A simple library for data storage in a JSON database",
   "main": "dist/",
   "scripts": {
     "build": "tsc"
